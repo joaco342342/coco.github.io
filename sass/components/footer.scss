@@ -1,0 +1,68 @@
+.footer {
+    background-color: $bgDark;
+    color: $fontLight;
+    padding: 60px 20px;
+
+    &__container {
+        @extend .container;
+        @include templateGrid($bpMedium, 3);
+
+        h4 {
+            color: $primary;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 20px
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        &-list {
+            li {
+                margin: 10px 0;
+
+                a {
+                    color: $fontLight;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        &-rrss {
+            @include templateFlex(row, space-evenly, false);
+            margin-top: 30px;
+
+            // mapa (llave: valor)
+            $socialIcons: (
+                github: #9ca3af,
+                tiktok: #14b8a6,
+                instagram: #c92d8f,
+                twitter: #55acee
+            );
+
+            // bucle
+            @each $socialName, $socialColors in $socialIcons {
+                .#{$socialName} {
+                    color: $fontLight;
+                    font-size: 30px;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $socialColors;
+                    }
+                }
+            }
+        }
+    }
+
+    &__copy {
+        margin-top: 40px;
+        text-align: center;
+        color: #94a3b8;
+    }
+}

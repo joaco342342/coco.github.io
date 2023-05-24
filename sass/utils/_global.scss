@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/ttf/Rubik-Bold.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/ttf/Rubik-Regular.ttf');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Lato';
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+// extend
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+// mixin
+@mixin templateGrid($bp, $colDesktop) {
+    // vista mobile
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    // vista desktop
+    @media (min-width: $bp) {
+        grid-template-columns: repeat($colDesktop, 1fr);
+    }
+}
+
+// @mixin templateGrid($column) {
+//     display: grid;
+//     grid-template-columns: repeat($column, 1fr);
+//     gap: 50px;
+// }
+
+@mixin templateFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+
+    @if ($align == true) {
+        align-items: center;
+    }
+}

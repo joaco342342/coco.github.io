@@ -1,0 +1,155 @@
+.hero {
+    background-image: linear-gradient(45deg, #14532d, $primary);
+    padding: 60px 20px;
+    color: $fontLight;
+
+    &__container {
+        @extend .container;
+        @include templateGrid($bpLarge, 2);
+
+        &-info {
+            h1 {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 40px;
+            }
+
+            a {
+                color: $fontLight;
+                border-radius: $borderRadius;
+                background-color: $bgDark;
+                font-weight: bold;
+                padding: 15px 30px;
+                transition: $transition;
+
+                &:hover {
+                    background-color: #1a2748;
+                }
+            }
+        }
+
+        &-video {
+            width: 100%;
+            border-radius: $borderRadius;
+            box-shadow: $boxShadow;
+            transition: $transition;
+
+            &:hover {
+                transform: rotate(5deg);
+            }
+        }
+    }
+}
+
+.courses {
+    margin-top: 60px;
+    padding: 0 20px;
+
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    &__cards {
+        @extend .container;
+        @include templateGrid($bpMedium, 2);
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: $borderRadius;
+            box-shadow: $boxShadow;
+            transition: $transition;
+
+            &:hover {
+                transform: translateY(-15px);
+            }
+
+            &__header {
+                img {
+                    width: 100%;
+                    border-radius: $borderRadius;
+                    margin-bottom: 20px;
+                    object-fit: cover;
+                }
+            }
+
+            &__title {
+                margin-bottom: 20px;
+                font-size: 20px;        
+            }
+
+            &__description {
+                margin-bottom: 40px;
+            }
+
+            &__link {
+                background-color: $primary;
+                color: #fff;
+                font-weight: bold;
+                padding: 15px 0;
+                border-radius: $borderRadius;
+                width: 100%;
+                display: block;
+                text-align: center;
+                transition: $transition;
+
+                &:hover {
+                    background-color: #1ca24d;
+                }
+            }
+        }
+    }
+}
+
+.statistics {
+    margin-top: 80px;
+    padding: 120px 20px;
+    background-image: url('../assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__container {
+        @extend .container;
+        @include templateFlex(column, flex-start, false);
+
+        &-item {
+            color: $fontLight;
+            font-size: 40px;
+            text-align: center;
+            margin: 30px 0;
+
+            span {
+                font-size: 20px;
+                margin-top: 5px;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: $bpSmall) {
+    .hero__container {
+        align-items: center
+    }
+
+    .statistics__container {
+        @include templateFlex(row, space-around, false);
+
+        &-item {
+            margin: 0
+        }
+    }
+}
+
+@media (min-width: $bpLarge) {
+    .courses__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Cursos de Fotografia en vivo y mucho más, visita Photograph Cursos para estudiar." />
+        <title>Photograph - Cursos Fotografia</title>
+
+        <!-- iconos de bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        
+        <!-- archivo de salida de SASS -->
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <link rel="shortcut icon" href="./assets/images.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- BEM = B: bloque, E: elemento (__), M: modificador (--) --> 
+        <header class="header">
+            <div class="header__container">
+                <h3><a href="./index.html" class="header__container-logo">PHOTOGRAPH</a></h3>
+                <nav>
+                    <!-- NAV -->
+                    <ul class="header__container-navbar">
+                        <li><a href="./pages/Curso.html">Cursos</a></li>
+                        <li><a href="./pages/Comunidad.html">Comunidad</a></li>
+                        <li><a href="./pages/Nosotros.html">Nosotros</a></li>
+                        <li><a href="./index.html">Inicio</a></li>
+                    </ul>
+
+                    <!-- MOBILE -->
+                    <div class="header__container-navbar-mobile">
+                        <span>🍔</span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__container-info">
+                        <h1>Aprende de fotografia en cursos online</h1>
+                        <p>
+                            En nuestros cursos online vas a tener interacción real,
+				             tutor y compañeros, para resolver todas
+							tus dudas y avanzar en tus proyectos prácticos.
+                        </p>
+                        <a href="">Ver todos los cursos</a>
+                    </div>
+                    <video class="hero__container-video" src="./assets/video/video.mp4" autoplay muted loop></video>
+                </div>
+            </section>
+
+            <section class="courses">
+                <h3 class="courses__title">Cursos y Carreras</h3>
+                <div class="courses__cards">
+                    <!-- tarjeta 1 -->
+                    <article class="card">
+                        <div class="card__header">
+                            
+                            <img class="card__header-image" src="./assets/images/fotocurso.jpeg" alt="Curso de Desarrollo Web" width="360" height="215" />
+                        </div>
+                        <h2 class="card__title">Curso de Fotografia</h2>
+                        <p class="card__description">Te introduciras en las mejores prácticas de Fotografia</p>
+                        <a href="./pages/Cursos/Fotografia.html" class="card__link">Saber más</a>
+                    </article>
+
+                    <!-- tarjeta 2 -->
+                    <article class="card">
+                        <div class="card__header">
+                            
+                            <img src="./assets/images/fotocurso2.jpg"  width="360" height="215" />
+                        </div>
+                        <h2 class="card__title">Curso de Edicion </h2>
+                        <p class="card__description">Aprenderás Editar tus fotos de la mejor manera</p>
+                        <a href="./pages/Cursos/Photoshop.html" class="card__link">Saber más</a>
+                    </article>
+
+                    
+                </div>
+            </section>
+
+            <section class="statistics">
+                <div class="statistics__container">
+                    <h3 class="statistics__container-item">Horarios:<span>8:00 a 10:00 <br>10:00 a 12:00 <br> 15:00 a 17:00</span></h3>
+                    <h3 class="statistics__container-item">Duracion:<span>6 Meses</span></h3>
+                    <h3 class="statistics__container-item">Objetivo:<span>Aprender lo mejor de la fotografia y edicion.</span></h3>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div>
+                    <h4>Educación</h4>
+                    <ul class="footer__container-list">
+                        <li><a href="./pages/Cursos/Fotografia.html">Fotografia</a></li>
+                        <li><a href="./pages/Cursos/Photoshop.html">Photoshop</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Comunidad</h4>
+                    <ul class="footer__container-list">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Experiencias</a></li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Conoce mas sobre nosotros, y mejora tus habilidades sobre Fotografia y Edicion.</h3>
+                    <!-- Redes Sociales -->
+                    <div class="footer__container-rrss">
+                        <a href="" class="github"><i class="bi bi-github"></i></a>
+                        <a href="" class="tiktok"><i class="bi bi-tiktok"></i></a>
+                        <a href="" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__copy">
+                <small>&copy; 2023 | Photograph - Cursos, todos los derechos reservados.</small>
+            </div>
+        </footer>
+
+        <div class="whatsapp">
+            <a href="https://wa.me/+54911" target="_blank">
+            
+            </a>
+        </div>
+    </body>
+</html>
